@@ -1,0 +1,12 @@
+body {
+    background-image: url('images/main_background.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .btn-primary {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+  }
+  

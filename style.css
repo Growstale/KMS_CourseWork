@@ -1,0 +1,189 @@
+/* Основной стиль диалога */
+.dialog {
+    position: fixed;
+    top: 10%;
+    left: 100%;
+    width: 800px;
+    height: 800px;
+    margin-left: -30px;
+    margin-top: -25px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background: #f9f9f9;
+    color: #333;
+    z-index: 1500;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Лейбл диалога */
+.dialog .label {
+    transform: rotate(270deg);
+    width: 430px;
+    height: 20px;
+    text-align: center;
+    color: #007bff;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: -26%;
+    margin-top: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Заголовок диалога */
+.dialog .header {
+    text-align: center;
+    margin-top: -430px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* История сообщений */
+.dialog .history {
+    height: 500px;
+    margin-left: 60px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Сообщения в истории */
+.dialog .history .question {
+    margin: 10px auto;
+    background: #007bff;
+    width: 90%;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Общий стиль вопроса */
+.dialog .question {
+    margin: 0px auto;
+    width: 90%;
+    text-align: center;
+}
+
+/* Ответы */
+.dialog .answer {
+    width: 90%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/* Поля ввода вопроса */
+.dialog .question input {
+    font-size: 16px;
+    display: block;
+    width: calc(80% - 20px);
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопки отправки вопроса */
+.dialog .question button {
+    margin: 10px auto;
+    width: calc(80% - 20px);
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialog .question button:hover {
+    background: #1775da;
+}
+
+.dialog .answer img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dialog .answer img.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1600;
+    transform: scale(1);
+    cursor: zoom-out;
+}
+
+/* Затенение фона */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
+    display: none;
+}
+
+@media screen and (max-width: 850px) and (min-width: 650px) {
+    .dialog {
+        width: 600px;
+    }
+    .dialog .label {
+        margin-top: 65%;
+        margin-left: -36%;
+    }
+    .dialog .header {
+        margin-top: -410px;
+    }
+}
+
+@media screen and (max-width: 650px) and (min-width: 450px) {
+    .dialog {
+        width: 400px;
+    }
+    .dialog .label {
+        margin-top: 85%;
+        margin-left: -56%;
+    }
+    .dialog .header {
+        margin-top: -350px;
+    }
+    .dialog .history {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .dialog {
+        width: 300px;
+    }
+    .dialog .label {
+        margin-top: 95%;
+        margin-left: -76%;
+    }
+    .dialog .header {
+        margin-top: -280px;
+    }
+    .dialog .history {
+        height: 450px;
+    }
+}
